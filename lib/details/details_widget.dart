@@ -15,6 +15,9 @@ class DetailsWidget extends StatefulWidget {
 
   final TasksRecord? taskDoc;
 
+  static String routeName = 'Details';
+  static String routePath = '/details';
+
   @override
   State<DetailsWidget> createState() => _DetailsWidgetState();
 }
@@ -66,19 +69,19 @@ class _DetailsWidgetState extends State<DetailsWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Container(
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 400.0,
               ),
-              decoration: const BoxDecoration(),
+              decoration: BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     child: Container(
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -89,7 +92,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(24.0),
+                        padding: EdgeInsets.all(24.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,14 +173,14 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
@@ -199,7 +202,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                 ),
                                 filled: true,
                                 fillColor: _model.editingMode
-                                    ? const Color(0x9CE0E3E7)
+                                    ? Color(0x9CE0E3E7)
                                     : FlutterFlowTheme.of(context)
                                         .secondaryBackground,
                               ),
@@ -215,7 +218,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                   .asValidator(context),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 'Details',
@@ -248,14 +251,14 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Color(0x00000000),
                                     width: 1.0,
                                   ),
@@ -277,7 +280,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                 ),
                                 filled: true,
                                 fillColor: _model.editingMode
-                                    ? const Color(0x9CE0E3E7)
+                                    ? Color(0x9CE0E3E7)
                                     : FlutterFlowTheme.of(context)
                                         .secondaryBackground,
                               ),
@@ -294,7 +297,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                   .asValidator(context),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -320,9 +323,9 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 70.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 16.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -343,7 +346,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 12.0)),
+                          ].divide(SizedBox(height: 12.0)),
                         ),
                       ),
                     ),
